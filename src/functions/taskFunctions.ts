@@ -1,6 +1,10 @@
 import { Task } from "../interface/taskInterface";
 
-let taskList: Task[] = JSON.parse(localStorage.getItem('task') || JSON.stringify([]));
+let taskList: Task[] = JSON.parse(localStorage.getItem('task') || JSON.stringify([
+    {task: 'Code', completed: false},
+    {task: 'Sleep', completed: false},
+    {task: 'Repeat', completed: false}
+]));
 
 export const saveTask = () => {
     localStorage.setItem('task', JSON.stringify(taskList))
@@ -31,7 +35,7 @@ export const upDateTask = () => {
 
         taskItem.innerHTML= `<div class="checkmark">&#10004;</div>
         ${todo.task}
-        <button class="delete-button">Delete Button</button>`;
+        <button class="delete-button">Button</button>`;
 
         taskItem.querySelector('.checkmark')?.addEventListener('click', ()=> toggleTask(index))
         taskItem.querySelector('.delete-button')?.addEventListener('click', ()=> deleteTask(index))

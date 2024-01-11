@@ -4,11 +4,76 @@
   box-sizing: border-box;
 }
 
-html {
-  padding: 5rem;
-}
-
 body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   display: flex;
   justify-content: center;
+  padding: 5rem;
+  background-color: lavender;
+}
+
+#app {
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 2rem;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.taskText {
+  font-size: 1.1rem;
+  margin: 1rem auto;
+}
+
+.addTaskBtn {
+  font-weight: bold;
+  padding: 0.3rem;
+  border-radius: 0.6rem;
+  transition: 0.1s ease-in-out;
+}
+.addTaskBtn:hover {
+  color: green;
+  box-shadow: 0.1rem 0.1rem 0.3rem 0rem rgba(0, 0, 0, 0.5);
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem auto;
+  padding: 0.6rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid gray;
+}
+
+.checkmark {
+  color: red;
+  cursor: pointer;
+}
+.checkmark:hover {
+  color: green;
+}
+
+.checked .checkmark {
+  color: green;
+}
+.checked .checkmark:hover {
+  color: red;
+}
+
+.delete-button {
+  font-weight: bold;
+  padding: 0.1rem;
+  border-radius: 0.6rem;
+  color: red;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.delete-button:hover {
+  background-color: red;
+  color: whitesmoke;
+  box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=main.css.map */
