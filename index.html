@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="src/sass/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Todo List</h1>
+      <form id="form">
+        <input type="text" id="taskText">
+        <button>Add Task</button>
+      </form>
+      <h3>Incomplete-List</h3>
+      <ul id="incomplete-list"></ul>
+
+      <h3>Complete</h3>
+      <ul id="complete-list"></ul>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
