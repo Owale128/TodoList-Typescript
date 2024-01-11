@@ -18,7 +18,9 @@ document.getElementById('form')?.addEventListener('submit', (e: SubmitEvent) =>{
     if(taskInputValue.trim() !== ''){
         const todo = {task: taskInputValue, completed: false}
         taskList.push(todo)
-    }
+        saveTask()
+        upDateTask()
+    }   
     taskInput.value = '';
 })
 
@@ -29,13 +31,16 @@ const upDateTask = () => {
     incomplete.innerHTML = '';
     complete.innerHTML = '';
 
-    taskList.forEach((todo) =>{
+    taskList.forEach((todo, index) =>{
         const taskItem = document.createElement('li');
         taskItem.className = 'task-item';
 
         taskItem.innerHTML= `<div class="checkmark">&#10004;</div>
         ${todo.task}
         <button class="delete-button">Delete Button</button>`;
+
+        taskItem.querySelector('.checkmark')?.addEventListener('click', ()=> toggleTask(index))
+        taskItem.querySelector('.delete-button')?.addEventListener('click', ()=> deleteTask(index))
 
         if(todo.completed) {
         taskItem.classList.add('checked')
@@ -46,3 +51,17 @@ const upDateTask = () => {
     })
 }
 
+
+const toggleTask = (index: number) => {
+taskList[index].completed = !taskList[index].completed
+saveTask()
+upDateTask()
+}
+
+const deleteTask = (index: number) => {
+taskList.splice(index, 1)
+saveTask()
+upDateTask()
+}
+
+upDateTask()
