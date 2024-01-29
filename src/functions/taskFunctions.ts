@@ -35,7 +35,7 @@ export const upDateTask = () => {
 
         taskItem.innerHTML= `<div class="checkmark">&#10004;</div>
         ${todo.task}
-        <button class="delete-button">Button</button>`;
+        <button class="delete-button">Delete</button>`;
 
         taskItem.querySelector('.checkmark')?.addEventListener('click', ()=> toggleTask(index))
         taskItem.querySelector('.delete-button')?.addEventListener('click', ()=> deleteTask(index))

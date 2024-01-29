@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: 'Cambria, Cochin, Georgia, Times, "Times New Roman", serif';
   display: flex;
   justify-content: center;
   padding: 5rem;
@@ -37,7 +37,7 @@ h1 {
 }
 .addTaskBtn:hover {
   color: green;
-  box-shadow: 0.1rem 0.1rem 0.3rem 0rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba(0, 0, 0, 0.5);
 }
 
 .task-item {
@@ -54,7 +54,7 @@ h1 {
   cursor: pointer;
 }
 .checkmark:hover {
-  color: green;
+  color: red;
 }
 
 .checked .checkmark {

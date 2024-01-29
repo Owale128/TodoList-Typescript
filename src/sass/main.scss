@@ -1,3 +1,5 @@
+@import 'variables';
+
 * {
     padding: 0;
     margin: 0;
@@ -5,18 +7,18 @@
 }
 
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: $primary-font;
     display: flex;
     justify-content: center;
     padding: 5rem;
-    background-color: lavender;
+    background-color: $primary-color;
 }
 
 #app {
-    border: 1px solid black;
+    border: 1px solid $border-color;
     border-radius: 2rem;
     padding: 2rem;
-background-color: white;
+    background-color: $secondary-color;
 }
 
 h1 {
@@ -36,8 +38,8 @@ h1 {
     transition: 0.1s ease-in-out;
     
     &:hover {
-        color: green;
-        box-shadow: 0.1rem 0.1rem 0.3rem 0rem rgba(0, 0, 0, 0.5);
+        color: $link-color;
+        box-shadow: $button-shadow;
     }
 }
 
@@ -55,12 +57,12 @@ h1 {
     cursor: pointer;
     
     &:hover {
-        color: green;
+        color: $link-hover-color;
     }
 }
 
 .checked .checkmark {
-    color: green;
+    color: $link-color;
     
     &:hover {
         color: red;
@@ -71,12 +73,13 @@ h1 {
     font-weight: bold;
     padding: 0.1rem;
     border-radius: 0.6rem;
-    color: red;
+    color: $button-color;
     cursor: pointer;
     transition: 0.1s ease-in-out;
     
-    &:hover {background-color: red;
-    color: whitesmoke;
-    box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba(0, 0, 0, 0.5);
+    &:hover {
+        background-color: $button-color;
+        color: $button-hover-color;
+        box-shadow: $button-shadow;
     }
 }
