@@ -76,4 +76,33 @@ h1 {
   background-color: red;
   color: whitesmoke;
   box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+  #app {
+    margin-top: 8rem;
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .taskText {
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+    width: 12rem;
+  }
+  .addTaskBtn {
+    font-size: 1rem;
+    margin: 1rem 6rem 2rem;
+    display: block;
+  }
+  .task-item {
+    font-size: 1.5rem;
+  }
+  .delete-button {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=main.css.map */

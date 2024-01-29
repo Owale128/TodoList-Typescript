@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 * {
     padding: 0;
@@ -81,5 +82,43 @@ h1 {
         background-color: $button-color;
         color: $button-hover-color;
         box-shadow: $button-shadow;
+    }
+}
+
+@include respond-to($breakpoint) {
+
+    body {
+        padding: 2rem;
+    }
+
+    #app {
+        margin-top: 8rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .taskText {
+        font-size: 1.5rem;
+        margin-left: 2.5rem;
+        width: 12rem;
+    
+    }
+
+    .addTaskBtn {
+        font-size: 1rem;
+        margin: 1rem 6rem 2rem ;
+        display: block;
+        
+    }
+
+    .task-item {
+        font-size: 1.5rem;
+    }
+
+    .delete-button {
+        font-size: 0.9rem;
     }
 }
