@@ -1,7 +1,7 @@
 "use strict";
 var _a;
 // Object.defineProperty(exports, "__esModule", { value: true });
-var createTask = require("./functions/taskFunctions");
+import * as createTask from "./functions/taskFunctions"; // Använd import-syntaxen
 (_a = document.getElementById('form')) === null || _a === void 0 ? void 0 : _a.addEventListener('submit', function (e) {
     e.preventDefault();
     var taskInput = document.getElementById('taskText');
@@ -9,4 +9,5 @@ var createTask = require("./functions/taskFunctions");
     createTask.addTask(taskInputValue);
     taskInput.value = '';
 });
-createTask.upDateTask();
+
+createTask.upDateTask(); // Aktivera om det var kommenterat bort
