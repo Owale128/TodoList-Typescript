@@ -105,4 +105,17 @@ h1 {
   .delete-button {
     font-size: 0.9rem;
   }
+  .checkmark {
+    color: red;
+    cursor: pointer;
+  }
+  .checkmark:hover {
+    color: red;
+  }
+  .checked .checkmark {
+    color: green;
+  }
+  .checked .checkmark:hover {
+    color: red;
+  }
 }/*# sourceMappingURL=main.css.map */
